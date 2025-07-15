@@ -7,14 +7,15 @@
   <style>
       body {
           font-family: 'Arial', sans-serif;
-          background-color: #e0f7fa;
-          color: #00796b;
+          background-color: #000000; /* 배경색을 검은색으로 변경 */
+          color: #ffffff; /* 글자색을 흰색으로 변경 */
           margin: 0;
           padding: 20px;
           text-align: center;
       }
       h1 {
-          color: #004d40;
+          color: #ffffff; /* 제목 색상도 흰색으로 변경 */
+          font-weight: bold; /* 강조를 굵게 설정 */
       }
       ul {
           list-style-type: none;
@@ -25,17 +26,12 @@
       }
       a {
           text-decoration: none;
-          color: #00796b;
-          font-weight: bold;
+          color: #ffffff; /* 링크 색상도 흰색으로 변경 */
+          font-weight: bold; /* 링크 강조를 굵게 설정 */
           transition: color 0.3s;
       }
       a:hover {
-          color: #004d40;
-      }
-      .header-link {
-          position: absolute;
-          top: 20px;
-          right: 20px;
+          color: #cccccc; /* 링크 hover 시 색상 변경 */
       }
       .footer-link {
           position: absolute;
@@ -47,7 +43,6 @@
 </head>
 <body>
   <h1>기능 테스트</h1>
-  <a class="header-link" href="index.html">메인 페이지</a>
   <ul id="linkList"></ul>
 
   <script>
@@ -56,7 +51,11 @@
 
       for (let i = 1; i <= linkCount; i++) {
           const li = document.createElement('li');
-          li.innerHTML = `<a href="tempLink${i}.html" target="_blank">링크 ${i}</a>`;
+          if (i === 1) {
+              li.innerHTML = `<a href="tempLink${i}.html" target="_blank">Agentic AI 를 이용한 Genesys Messaging service</a>`; // 첫 번째 링크 이름 변경
+          } else {
+              li.innerHTML = `<a href="tempLink${i}.html" target="_blank">링크 ${i}</a>`;
+          }
           linkList.appendChild(li);
       }
   </script>
