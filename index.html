@@ -3,34 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>지브리 스타일 인사</title>
+  <title>기능 테스트</title>
   <style>
       body {
-          background-color: #f0e68c; /* 부드러운 배경색 */
-          font-family: 'Garamond', serif;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 100vh;
+          font-family: 'Arial', sans-serif;
+          background-color: #e0f7fa;
+          color: #00796b;
           margin: 0;
-          color: #4a4a4a;
-          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+          padding: 20px;
+          text-align: center;
       }
       h1 {
-          font-size: 5em;
-          animation: fadeIn 2s ease-in-out;
+          color: #004d40;
       }
-      @keyframes fadeIn {
-          from {
-              opacity: 0;
-          }
-          to {
-              opacity: 1;
-          }
+      ul {
+          list-style-type: none;
+          padding: 0;
+      }
+      li {
+          margin: 10px 0;
+      }
+      a {
+          text-decoration: none;
+          color: #00796b;
+          font-weight: bold;
+          transition: color 0.3s;
+      }
+      a:hover {
+          color: #004d40;
+      }
+      .header-link {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+      }
+      .footer-link {
+          position: absolute;
+          bottom: 20px;
+          left: 50%;
+          transform: translateX(-50%);
       }
   </style>
 </head>
 <body>
-  <h1>안녕하세요.</h1>
+  <h1>기능 테스트</h1>
+  <a class="header-link" href="index.html">메인 페이지</a>
+  <ul id="linkList"></ul>
+
+  <script>
+      const linkCount = 5; // 하이퍼링크 개수
+      const linkList = document.getElementById('linkList');
+
+      for (let i = 1; i <= linkCount; i++) {
+          const li = document.createElement('li');
+          li.innerHTML = `<a href="tempLink${i}.html" target="_blank">링크 ${i}</a>`;
+          linkList.appendChild(li);
+      }
+  </script>
+  
+  <div class="footer-link">
+      <a href="https://help.mypurecloud.com/" target="_blank">Genesys Resource Center</a>
+  </div>
 </body>
 </html>
