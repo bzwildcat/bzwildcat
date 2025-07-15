@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스니펫 포함 웹 페이지</title>
+  <style>
+      body {
+          font-family: 'Arial', sans-serif;
+          background-color: #d3d3d3; /* 밝은 회색 */
+          color: #333;
+          margin: 0;
+          padding: 20px;
+          text-align: center;
+      }
+      h1 {
+          color: #004d40;
+      }
+      .snippet {
+          background-color: #ffffff;
+          border: 1px solid #ccc;
+          padding: 10px;
+          border-radius: 5px;
+          margin: 20px auto;
+          width: 80%;
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+      }
+  </style>
+</head>
+<body>
+  <h1>스니펫 포함 웹 페이지</h1>
+  
+  <div class="snippet">
+      <script type="text/javascript" charset="utf-8">
+          (function (g, e, n, es, ys) {
+              g['_genesysJs'] = e;
+              g[e] = g[e] || function () {
+                  (g[e].q = g[e].q || []).push(arguments)
+              };
+              g[e].t = 1 * new Date();
+              g[e].c = es;
+              ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
+          })(window, 'Genesys', 'https://apps.apne2.pure.cloud/genesys-bootstrap/genesys.min.js', {
+              environment: 'prod-apne2',
+              deploymentId: 'c5ca0d6a-bdb4-4d8f-a442-f113029f2cad'
+          });
+      </script>
+  </div>
+
+</body>
+</html>
